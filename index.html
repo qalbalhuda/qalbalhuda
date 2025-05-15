@@ -9,40 +9,52 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('https://yt3.googleusercontent.com/iSajXtLVrysizcv9253KIT0sWoT-Fx3MA04jJYJ1hOQVWKobFjfUUHYcMNV_e51WzAewav8e=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj') no-repeat center center fixed;
+      background: url('https://yt3.googleusercontent.com/iSajXtLVrysizcv9253KIT0sWoT-Fx3MA04jJYJ1hOQVWKobFjfUUHYcMNV_e51WzAewav8e=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj') no-repeat center center;
       background-size: cover;
       color: white;
       text-align: center;
       padding: 20px;
     }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 16px;
+      display: inline-block;
+      max-width: 100%;
+    }
     .logo {
       width: 120px;
       border-radius: 50%;
-      margin-top: 20px;
+      margin: 20px auto 10px;
       border: 3px solid white;
+      display: block;
     }
     .title {
       font-size: 2em;
-      margin: 20px 0 10px;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: inline-block;
-      padding: 5px 15px;
-      border-radius: 10px;
+      margin: 10px 0 20px;
     }
     .video-container {
-      margin: 20px auto;
-      max-width: 90%;
-    }
-    iframe {
-      width: 100%;
-      height: 250px;
-      border: none;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
       border-radius: 12px;
+      margin: 0 auto 30px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
     .quran-img {
       width: 80%;
       max-width: 400px;
-      margin-top: 30px;
+      margin: 30px auto;
+      display: block;
       border-radius: 16px;
       box-shadow: 0 0 10px #000;
     }
@@ -52,18 +64,20 @@
   </style>
 </head>
 <body>
-  <img src="https://yt3.googleusercontent.com/fvL6aHa7umi17yYll_xT8ZiRmacr3qs-d9sDticpsxPVfGAP6LCM0XndDx5w4yztcx4eZJkP=s160-c-k-c0x00ffffff-no-rj" alt="Qalb Al Huda Logo" class="logo" />
-  <div class="title">Qalb Al Huda</div>
+  <div class="overlay">
+    <img src="https://yt3.googleusercontent.com/fvL6aHa7umi17yYll_xT8ZiRmacr3qs-d9sDticpsxPVfGAP6LCM0XndDx5w4yztcx4eZJkP=s160-c-k-c0x00ffffff-no-rj" alt="Qalb Al Huda Logo" class="logo" />
+    <div class="title">Qalb Al Huda</div>
 
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/G-cgWHzdBzY" allowfullscreen></iframe>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/G-cgWHzdBzY" allowfullscreen></iframe>
+    </div>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Qur%27an%2C_Mashhad_%28crop%29.jpg/800px-Qur%27an%2C_Mashhad_%28crop%29.jpg" alt="Quran Image" class="quran-img"/>
+
+    <audio controls autoplay loop>
+      <source src="https://server11.mp3quran.net/thubti/001.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   </div>
-
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Qur%27an%2C_Mashhad_%28crop%29.jpg/800px-Qur%27an%2C_Mashhad_%28crop%29.jpg" alt="Quran Image" class="quran-img"/>
-
-  <audio controls autoplay loop>
-    <source src="https://server11.mp3quran.net/thubti/001.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
 </body>
 </html>
